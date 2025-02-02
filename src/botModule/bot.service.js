@@ -5,7 +5,7 @@ import { env } from "../utils/env.js";
 const bot = new TelegramBot(env("TG_BOT_TOKEN"), { polling: true });
 
 export async function sendMessageToAllowedUsers(data) {
-  await bot.sendMessage(env("TG_CHAT_ID2"), data.text, {
+  await bot.sendMessage(env("TG_CHAT_ID"), data.text, {
     parse_mode: "HTML",
   });
 }
